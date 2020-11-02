@@ -1,10 +1,11 @@
-package com.gobstoppers.antwerp.rest.rest.assembler;
+package com.gobstoppers.antwerp.rest.assembler;
 
-import com.gobstoppers.antwerp.rest.model.Portfolio;
-import com.gobstoppers.antwerp.rest.rest.PortfolioController;
+import com.gobstoppers.antwerp.model.Portfolio;
+import com.gobstoppers.antwerp.rest.PortfolioController;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Component;
 
 import java.util.Collection;
@@ -20,7 +21,7 @@ public class PortfolioModelAssembler implements RepresentationModelAssembler<Por
     @Override
     public EntityModel<Portfolio> toModel(Portfolio entity) {
         return EntityModel.of(entity,
-                linkTo(methodOn(PortfolioController.class).one(entity.getUuid())).withSelfRel(),
+                WebMvcLinkBuilder.linkTo(methodOn(PortfolioController.class).one(entity.getUuid())).withSelfRel(),
                 linkTo(methodOn(PortfolioController.class).all()).withRel("portfolios"));
     }
 

@@ -1,7 +1,7 @@
-package com.gobstoppers.antwerp.rest;
+package com.gobstoppers.antwerp;
 
-import com.gobstoppers.antwerp.rest.model.Portfolio;
-import com.gobstoppers.antwerp.rest.repository.PortfolioRepository;
+import com.gobstoppers.antwerp.model.Portfolio;
+import com.gobstoppers.antwerp.repository.PortfolioRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;

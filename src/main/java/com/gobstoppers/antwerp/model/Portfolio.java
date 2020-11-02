@@ -1,4 +1,4 @@
-package com.gobstoppers.antwerp.rest.model;
+package com.gobstoppers.antwerp.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.SortNatural;

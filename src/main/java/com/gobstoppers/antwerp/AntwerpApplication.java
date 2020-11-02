@@ -1,4 +1,4 @@
-package com.gobstoppers.antwerp.rest;
+package com.gobstoppers.antwerp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

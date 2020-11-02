@@ -1,6 +1,6 @@
-package com.gobstoppers.antwerp.rest.repository;
+package com.gobstoppers.antwerp.repository;
 
-import com.gobstoppers.antwerp.rest.model.Portfolio;
+import com.gobstoppers.antwerp.model.Portfolio;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
