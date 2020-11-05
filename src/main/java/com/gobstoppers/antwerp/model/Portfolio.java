@@ -15,7 +15,6 @@ public class Portfolio {
     @Id
     private UUID uuid;
 
-    @NotEmpty
     @ElementCollection(fetch = FetchType.EAGER)
     @SortNatural
     private Set<String> stocks;
