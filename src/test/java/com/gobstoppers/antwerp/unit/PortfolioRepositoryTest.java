@@ -41,7 +41,7 @@ public class PortfolioRepositoryTest {
     }
 
     @Test
-    public void zorStocks() {
+    public void zeroStocks() {
         Portfolio portfolio = new Portfolio(ID, Collections.EMPTY_SET);
         repo.save(portfolio);
         portfolio = repo.findById(ID).get();
