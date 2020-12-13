@@ -22,6 +22,15 @@ Added OAuth to the project so developers can see how it is integrated into Sprin
        	.antMatchers(HttpMethod.DELETE).hasAuthority("SCOPE_antwerp_write")
 		.anyRequest().authenticated())
 	.oauth2ResourceServer(oauth2 -> oauth2.jwt());
+	
+	to
+	
+	// retrieve clientId/clientSecret from applications.properties
+	.antMatchers(HttpMethod.DELETE).hasAuthority("SCOPE_antwerp_write")
+        	.anyRequest().authenticated())
+	.oauth2ResourceServer(oauth2 -> oauth2.opaqueToken()
+		.introspectionClientCredentials("clientId", "clientSecret"));
+
     
 ```
 
