@@ -1,7 +1,7 @@
 # AntwerpSpringRest
 
 ## Overview
-Basic Springboot w/ Spring Security web app. 
+Basic Springboot web application to demonstrate HATEOAS and Spring Security. 
 
 
 ## OAuth
