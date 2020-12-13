@@ -3,6 +3,11 @@
 ## Overview
 Basic Springboot web application to demonstrate HATEOAS and Spring Security. 
 
+- [Spring HATEOS](https://docs.spring.io/spring-hateoas/docs/current/reference/html/#reference) Resulting JSON provides navigation links
+- [Spring Security JWT vs. Opaque](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#oauth2) Opaque is more secure
+- [Dual OAuth Tokens](https://developer.okta.com/blog/2020/08/07/spring-boot-remote-vs-local-tokens) Okta post
+- [Dual OAuth Tokens](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#oauth2reourceserver-opaqueandjwt) Spring Security Reference Guide
+
 ## Configuration
 application.json
 ```
@@ -10,7 +15,7 @@ spring.security.oauth2.resourceserver.jwt.issuer-uri=<issuer uri here>
 ```
 
 ## OAuth
-Added OAuth to the project so developers can see how it is integrated into Springboot. **I used Okta to test but I didn't leverage Okta specific libraries in the project**. You can read Spring Security documentation to determine which type of OAuth token you require [JWT versus Opaque](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#oauth2). There is a good post on Okta's developer website describing how to achieve [dual tokens](https://developer.okta.com/blog/2020/08/07/spring-boot-remote-vs-local-tokens) configuration (JWT for GET and Opaque for POST, PUT and DELETE). Opaque tokens provide an extra level of abstraction but require verification via the OAuth Provider which can be time consumming for GET requests. If you want to test with Opaque tokens change the line below in the SecurityConfig. 
+Added OAuth to the project so developers can see how it is integrated into Springboot. **I used Okta to test but I didn't leverage Okta specific libraries in the project**. You can read Spring Security documentation to determine which type of OAuth token you require JWT versus Opaque.  Opaque tokens provide an extra level of abstraction but require verification via the OAuth Provider which can be time consumming for GET requests. If you want to test with Opaque tokens change the line below in the SecurityConfig. 
 
 ```
 	...
