@@ -15,7 +15,7 @@ Added OAuth to the project so developers can see how it is integrated into Sprin
     
 ```
 
-## Test
+## Integration Testing
 Look at the integration test cases, this had changed quite a bit from when I last looked at it. Pay attention to the configuration, how the tests pass a fake JWT token.
 
 ```
