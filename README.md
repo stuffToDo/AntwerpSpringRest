@@ -18,7 +18,7 @@ spring.security.oauth2.resourceserver.jwt.issuer-uri=<issuer uri here>
 Added OAuth to the project so developers can see how it is integrated into Springboot. **I used Okta to test but I didn't leverage Okta specific libraries in the project**. You can read Spring Security documentation to determine which type of OAuth token you require JWT versus Opaque.  Opaque tokens provide an extra level of abstraction but require verification via the OAuth Provider which can be time consumming for GET requests. If you want to test with Opaque tokens change the line below in the SecurityConfig. 
 
 ```
-	...
+	
        	.antMatchers(HttpMethod.DELETE).hasAuthority("SCOPE_antwerp_write")
 		.anyRequest().authenticated())
 	.oauth2ResourceServer(oauth2 -> oauth2.jwt());
