@@ -6,12 +6,13 @@ Just having fun catching up with all the SpringBoot updates. Nothing much has ch
 ## Test
 Look at the integration test cases, this had changed quite a bit from when I last looked at it. Pay attention to the configuration, how the tests pass a fake JWT token.
 
-`	// Configure the JWT with scopes antwerp_read and antwerp_write
+```
+	// Configure the JWT with scopes antwerp_read and antwerp_write
 	private static final JwtRequestPostProcessor JWT = jwt().jwt(jwt -> jwt.claim("scope", "openid antwerp_read antwerp_write"));
- 
- ...
- 
- 	@Test
+
+	...
+	
+	@Test
 	void deletePortfolio() throws Exception {
 		repo.save(new Portfolio(ID1, STOCKS));
 
@@ -20,4 +21,4 @@ Look at the integration test cases, this had changed quite a bit from when I las
 				.contentType(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk());
 	}
-`
+```
