@@ -7,7 +7,7 @@ Basic Springboot web application to demonstrate HATEOAS and Spring Security.
 - [JWT vs. Opaque](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#oauth2) Spring Security Reference Guide
 - [Dual OAuth Tokens](https://developer.okta.com/blog/2020/08/07/spring-boot-remote-vs-local-tokens) Okta Developer Forum
 - [Dual OAuth Tokens](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#oauth2reourceserver-opaqueandjwt) Spring Security Reference Guide
-- [Springboot w. Okta](https://developer.okta.com/blog/2018/12/18/secure-spring-rest-api)
+- [Springboot w. Okta](https://developer.okta.com/blog/2018/12/18/secure-spring-rest-api) Okta Developer example
 
 ## Configuration
 application.json
